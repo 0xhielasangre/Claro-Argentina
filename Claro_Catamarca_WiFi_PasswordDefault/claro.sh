@@ -94,7 +94,7 @@ for i in `seq 1 $num`;
 		if [[ $nom =~ $pat0 ]] || [[ $nom =~ $pat1 ]] 
 		then
 	# si hace match quita el primer y ultimo par de hexadecimales
-	# del BSSID (MAC address) y se agrega el ultimo par despues de restarle uno ;)
+	# del BSSID (MAC address) y se agrega al ultimo un 0 en el ultimo lugar
 			clr=1
 			pre=$(echo $mac|cut -c1-|sed "s/://g"|rev|cut -c2-|rev)
 			suf=$(echo $mac|cut -c17-)
